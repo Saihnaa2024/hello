@@ -1,8 +1,7 @@
 name: Build and push image to ECR
 
 on: push
-  env:
-ECS_TASK_DEFINITION: .github/workflows/task-definition.json
+ 
 jobs:
   
   build:
@@ -29,6 +28,7 @@ jobs:
 
     - name: Build, tag, and push image to Amazon ECR
       env:
+        ECS_TASK_DEFINITION: .github/workflows/task-definition.json
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: hello
         IMAGE_TAG: hello
