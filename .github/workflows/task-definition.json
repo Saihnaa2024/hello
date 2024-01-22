@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:200310138367:task-definition/GGtask:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:200310138367:task-definition/ggnewtask:1",
     "containerDefinitions": [
         {
-            "name": "GG",
-            "image": "200310138367.dkr.ecr.ap-southeast-1.amazonaws.com/hello",
+            "name": "gg",
+            "image": "200310138367.dkr.ecr.ap-southeast-1.amazonaws.com/hello:hello",
             "cpu": 0,
             "portMappings": [
                 {
@@ -24,7 +24,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/GGtask",
+                    "awslogs-group": "/ecs/ggnewtask",
                     "awslogs-region": "ap-southeast-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -32,7 +32,8 @@
             }
         }
     ],
-    "family": "GGtask",
+    "family": "ggnewtask",
+    "taskRoleArn": "arn:aws:iam::200310138367:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::200310138367:role/ecsTaskExecutionRole",
     "revision": 1,
     "volumes": [],
@@ -49,6 +50,9 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -73,7 +77,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-01-22T03:44:43.429Z",
+    "registeredAt": "2024-01-22T04:18:53.768Z",
     "registeredBy": "arn:aws:iam::200310138367:root",
     "tags": []
 }
