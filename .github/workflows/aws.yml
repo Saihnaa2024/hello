@@ -1,8 +1,8 @@
 name: Build and push image to ECR
 
 on: push
-  
-
+  env:
+ECS_TASK_DEFINITION: .github/workflows/task-definition.json
 jobs:
   
   build:
