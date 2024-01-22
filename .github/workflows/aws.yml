@@ -49,4 +49,5 @@ jobs:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: helloservice
           cluster: GG
-          wait-for-service-stability: true    
+          wait-for-service-stability: true
+             
