@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:200310138367:task-definition/ggtask:3",
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:200310138367:task-definition/hellotaskdef:1",
     "containerDefinitions": [
         {
-            "name": "gg",
-            "image": "200310138367.dkr.ecr.ap-southeast-1.amazonaws.com/hello:latest",
+            "name": "Helloworld",
+            "image": "200310138367.dkr.ecr.ap-southeast-1.amazonaws.com/hello:hello",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "portport",
+                    "name": "port",
                     "containerPort": 5000,
                     "hostPort": 5000,
                     "protocol": "tcp",
@@ -24,7 +24,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/ggtask",
+                    "awslogs-group": "/ecs/hellotaskdef",
                     "awslogs-region": "ap-southeast-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -32,10 +32,10 @@
             }
         }
     ],
-    "family": "ggtask",
+    "family": "hellotaskdef",
     "taskRoleArn": "arn:aws:iam::200310138367:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::200310138367:role/ecsTaskExecutionRole",
-    "revision": 3,
+    "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -77,7 +77,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-01-22T06:28:13.041Z",
+    "registeredAt": "2024-01-22T06:54:21.433Z",
     "registeredBy": "arn:aws:iam::200310138367:root",
     "tags": []
 }
