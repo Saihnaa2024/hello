@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:200310138367:task-definition/GGdef:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:200310138367:task-definition/GGtask:1",
     "containerDefinitions": [
         {
             "name": "GG",
@@ -24,7 +24,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/GGdef",
+                    "awslogs-group": "/ecs/GGtask",
                     "awslogs-region": "ap-southeast-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -32,7 +32,7 @@
             }
         }
     ],
-    "family": "GGdef",
+    "family": "GGtask",
     "executionRoleArn": "arn:aws:iam::200310138367:role/ecsTaskExecutionRole",
     "revision": 1,
     "volumes": [],
@@ -73,7 +73,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-01-22T03:11:06.254Z",
+    "registeredAt": "2024-01-22T03:44:43.429Z",
     "registeredBy": "arn:aws:iam::200310138367:root",
     "tags": []
 }
